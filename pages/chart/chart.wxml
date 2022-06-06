@@ -1,0 +1,4 @@
+<!--chart.wxml-->
+
+<!-- <view>{{code}}</view> -->
+<image src="{{img_path}}" mode="aspectFit" bindtap="imgPreview"></image>

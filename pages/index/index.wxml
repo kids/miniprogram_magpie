@@ -1,0 +1,35 @@
+<!--index.wxml-->
+<!-- <view>{{tb}}</view> -->
+<!-- <button type="primary" plain="true" bindtap="onClickGoX">GoX</button> -->
+<button type="primary" plain="true" bindtap="onClickScan">Scanner</button>
+
+<view class="table">
+  <view class="tr bg-w">
+    <view class="th">代码</view>
+    <view class="th">名称</view>
+    <view class="th">额</view>
+    <view class="th">行业</view>
+    <view class="th">分</view>
+  </view>
+  <block wx:for="{{tb}}">
+    <view class="tr bg-g" bindtap="onClickCode" data-value="{{item.sid}}" wx:if="{{item.sid[0] == '6'}}">
+      <view class="td">{{item.sid}}</view>
+      <view class="td">{{item.sname}}</view>
+      <view class="td">{{item.money}}</view>
+      <view class="td">{{item.conc}}</view>
+      <view class="td">{{item.ma20}}</view>
+    </view>
+    <view class="tr" bindtap="onClickCode" data-value="{{item.sid}}" wx:else>
+      <view class="td">{{item.sid}}</view>
+      <view class="td">{{item.sname}}</view>
+      <view class="td">{{item.money}}</view>
+      <view class="td">{{item.conc}}</view>
+      <view class="td">{{item.ma20}}</view>
+    </view>
+  </block>
+</view>
+
+<block wx:for="{{imgfall}}">
+  <view>{{item.title}}</view>
+  <image src="{{item.img}}"></image>
+</block>
